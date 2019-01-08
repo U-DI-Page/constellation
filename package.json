@@ -5,6 +5,7 @@
   "author": "yerg",
   "license": "MIT",
   "scripts": {
+    "watch":"npx webpack --watch --config ./config/webpack.dev.config.js",
     "build": "npx webpack --config ./config/webpack.dev.config.js",
     "prod": "npx webpack --config ./config/webpack.pro.config.js"
   },
