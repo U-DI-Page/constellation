@@ -1,21 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
+import avatar from './assets/hsboy.jpg';
+import './index.scss';
 
 
 const App=()=>{
   return(
-    <div className="box">我是一个粉刷匠</div>
+    <div className="box">
+      <p className="title">Hello Chrome</p>
+      <img className="avatar" src={ avatar } />
+    </div>
   )
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
-// const createDom=function(){
-//   const dom=document.createElement('div');
-//   dom.innerText='我是一个粉刷匠';
-//   dom.className='box'
-//   document.body.append(dom);
-// }
-
-// createDom();
