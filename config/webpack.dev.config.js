@@ -8,6 +8,7 @@ const constanst = require('./constants');
 
 const devConfig={
   mode:'development',
+  devtool:'inline-source-map',
   output:{
     filename:'[name].js',
     path:constanst.distPath

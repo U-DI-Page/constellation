@@ -9,7 +9,6 @@ const constants   = require('./constants');
 
 module.exports={
   entry:constants.indexPath,
-  devtool:'inline-source-map',
   module:{
     rules:[
       {
