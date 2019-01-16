@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Carrousel from 'rc-carrousel';
 
-import './index.scss';
+import styles from  './index.scss';
 
 
 const App=()=>{
@@ -26,7 +26,7 @@ const App=()=>{
 
   ]
   return(
-    <div className="box">
+    <div className={ styles.box }>
       <Carrousel
         width={ 500 }
         perSideNum={ 3 }
