@@ -4,6 +4,7 @@ const path = require('path');
 const MinCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 // 基础配置
 const webpackBaseConfig= require('./webpack.base.config');
 // 常量
@@ -23,7 +24,8 @@ const proConfig={
           MinCssExtractPlugin.loader, {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true
             }
           }, {
             loader: 'postcss-loader',
@@ -35,7 +37,8 @@ const proConfig={
           }, {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true
             }
           }
         ]
@@ -46,7 +49,12 @@ const proConfig={
     new MinCssExtractPlugin({
       filename:'css/[name][hash].css',
       chunkFilename:'[id][hash].js'
-    })
+    }),
+    new CleanWebpackPlugin(['dist'],{
+      root:constants.rootPath, // 根路径
+      verbose:false, // 开启控制台输出信息
+      dry:false // 启用删除文件
+    }),
   ],
   optimization:{
     minimizer:[

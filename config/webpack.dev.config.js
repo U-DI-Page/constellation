@@ -1,5 +1,8 @@
+const webpack = require('webpack');
 const merge = require('webpack-merge');
-const path = require('path');
+
+// const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 // 插件
 // 基础配置
 const webpackBaseConfig= require('./webpack.base.config');
@@ -13,6 +16,13 @@ const devConfig={
     filename:'[name].js',
     path:constanst.distPath
   },
+  devServer:{
+    contentBase: constanst.distPath,
+    hot: true,
+    open: true,
+    quiet: true,
+    overlay: true
+  },
   module:{
     rules:[
       {
@@ -21,19 +31,21 @@ const devConfig={
           'style-loader', {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true
             }
           }, {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
               sourceMap: true,
-              plugins: (loader) => [require('autoprefixer')({browsers: ['> 0.15% in CN']})]
+              plugins: (loader) => [ require('autoprefixer')({browsers: ['> 0.15% in CN']}) ]
             }
           }, {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              modules: true
             }
           }
         ]
@@ -41,6 +53,10 @@ const devConfig={
     ]
   },
   plugins:[
+    new webpack.HotModuleReplacementPlugin(),
+    // new OpenBrowserPlugin({
+    //   url: 'http://localhost:8080'
+    // })
   ]
 }
 

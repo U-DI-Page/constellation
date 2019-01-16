@@ -1,6 +1,4 @@
-const webpack = require('webpack');
 // plugins
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -12,13 +10,16 @@ module.exports={
   module:{
     rules:[
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)?$/,
         exclude: /(node_modules)/,
         include:[constants.srcPath],
         use:{
           loader:'babel-loader',
           options:{
-            cacheDirectory:true
+            cacheDirectory:true,
+            plugins: [
+              ['import', [{ libraryName: "antd", style: "css" }]]
+            ]
           }
         }
       },{
@@ -59,11 +60,6 @@ module.exports={
     ]
   },
   plugins:[
-    new CleanWebpackPlugin(['dist'],{
-      root:constants.rootPath, // 根路径
-      verbose:true, // 开启控制台输出信息
-      dry:false // 启用删除文件
-    }),
     new HtmlWebpackPlugin({
       title:'Chrome App',
       filename:'index.html',
