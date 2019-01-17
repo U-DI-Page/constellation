@@ -20,6 +20,7 @@ const proConfig={
     rules:[
       {
         test: /\.(sc|c|sa)ss$/,
+        include: constanst.srcPath,
         use: [
           MinCssExtractPlugin.loader, {
             loader: 'css-loader',
@@ -51,9 +52,9 @@ const proConfig={
       chunkFilename:'[id][hash].js'
     }),
     new CleanWebpackPlugin(['dist'],{
-      root:constants.rootPath, // 根路径
-      verbose:false, // 开启控制台输出信息
-      dry:false // 启用删除文件
+      root: constanst.rootPath, // 根路径
+      verbose: false, // 开启控制台输出信息
+      dry: false // 启用删除文件
     }),
   ],
   optimization:{
