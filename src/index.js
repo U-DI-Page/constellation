@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './page';
+
 // 样式
-import styles from  './index.scss';
+import Styles from  './index.scss';
 
 
 const App=()=>{
   
   return(
-    <div className={ styles.box }>
+    <div className={ Styles.box }>
       <Page />
     </div>
   )

@@ -56,6 +56,20 @@ module.exports={
             }
           }
         ]
+      },{
+        // 处理antd css
+        test: /\.css$/,
+        exclude: constants.srcPath,
+        use:[
+          {
+            loader: "style-loader"
+          },{
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          }
+        ]
       }
     ]
   },

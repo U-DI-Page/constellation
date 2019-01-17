@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
-// const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-
 // 插件
 // 基础配置
 const webpackBaseConfig= require('./webpack.base.config');
@@ -27,6 +25,7 @@ const devConfig={
     rules:[
       {
         test: /\.(sc|c|sa)ss$/,
+        include: constanst.srcPath,
         use: [
           'style-loader', {
             loader: 'css-loader',
@@ -54,9 +53,6 @@ const devConfig={
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin(),
-    // new OpenBrowserPlugin({
-    //   url: 'http://localhost:8080'
-    // })
   ]
 }
 

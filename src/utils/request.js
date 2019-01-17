@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { setLocalstorage } from './util';
 
 // authorized 认证参数
 const APP_CODE = 'APPCODE cd792067c92e406d93b803f9c03c614a';
@@ -49,7 +50,12 @@ const apiGet=(url,params={})=>{
           }).catch(error=>{
             reject(error)
           })
-        });
+        }).then(res=>{
+          if(res.status === 200){
+            setLocalstorage('data', res.data.showapi_res_body);
+          }
+          return res;
+        })
 }
 
 export default apiGet;

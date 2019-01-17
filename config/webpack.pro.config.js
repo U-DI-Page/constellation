@@ -62,7 +62,9 @@ const proConfig={
       new OptimizeCSSAssetsPlugin(),
       //  压缩js文件
       new UglifyJsPlugin({
-        cache: true, parallel: true, sourceMap: true // set to true if you want JS source maps
+        cache: true, 
+        parallel: true, 
+        sourceMap: true // set to true if you want JS source maps
       })
     ]
   }
