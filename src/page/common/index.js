@@ -39,7 +39,13 @@ export const ContentArea=(props)=>(
 
 // 行
 export const OneRow=(props)=>(
-  <Row { ...props } style={{ height:'30px',lineHeight:'30px' }}>
+  <Row 
+    { ...props } 
+    style={{ 
+      minHeight:'30px',
+      height:'auto',
+      lineHeight:'30px' 
+      }}>
     { props.children }
   </Row>
   

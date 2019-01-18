@@ -6,7 +6,7 @@ import {
   ContentArea,
   TxtCard,
   Loading
- } from '../common'
+ } from '../common';
 
 // 样式
 import Styles from './day.scss';

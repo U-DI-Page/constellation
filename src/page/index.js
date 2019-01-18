@@ -80,16 +80,16 @@ export default class Page extends React.PureComponent{
               <Day data={ data.day } />
             </TabPane>
             <TabPane tab="明日" key="2">
-              <Tomorrow />
+              <Tomorrow data={ data.tomorrow } />
             </TabPane>
             <TabPane tab="本周" key="3">
-              <Week />
+              <Week data={ data.week } />
             </TabPane>
             <TabPane tab="本月" key="4">
-              <Month />
+              <Month data={ data.month } />
             </TabPane>
             <TabPane tab="今年" key="5">
-              <Year />
+              <Year data={ data.year } />
             </TabPane>
           </Tabs>
         </div>
