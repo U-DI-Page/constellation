@@ -44,7 +44,7 @@ const apiGet=(url,params={})=>{
 
   return new Promise((resolve,reject)=>{
           axios.get(url,{
-            params:{ ...params, ...defaultParams }
+            params:{ ...defaultParams, ...params }
           }).then(response=>{
             resolve(response)
           }).catch(error=>{

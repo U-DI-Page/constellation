@@ -27,15 +27,20 @@ export default class Page extends React.PureComponent{
   componentDidMount(){
     const data = getLocalStorage('data');
     if(data){
-      this.setState({ data });
+      this.setState({ data: JSON.parse(data) });
     }else{
       this.getData();
     }
   }
 
+  // 切换星座
+  handleChange=(c)=>{
+    this.getData({ star: c.title })
+  }
+
   // 获取数据
-  getData=()=>{
-    request('star').then(res=>{
+  getData=( parmas={} )=>{
+    request('star', parmas).then(res=>{
       if(res.status === 200){
         this.setState({
           data:res.data.showapi_res_body
@@ -61,6 +66,8 @@ export default class Page extends React.PureComponent{
             perSideWidth={ 100 }
             scale={ 0.7 }
             imageArr={ imageArr }
+            onNextClick={ this.handleChange }
+            onPreClick={ this.handleChange }
           />
         </div>
         <div className={ Styles.body }>

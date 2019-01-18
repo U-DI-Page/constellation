@@ -13,7 +13,7 @@ const imageArr = [
 
   { title:'shuangyu', src:`${ imgPath }/shuangyu.png` },
   { title:'shuiping', src:`${ imgPath }/shuiping.png` },
-  { title:'tianping', src:`${ imgPath }/tianping.png` },
+  { title:'tiancheng', src:`${ imgPath }/tianping.png` },
   { title:'tianxie', src:`${ imgPath }/tianxie.png` },
 ]
 

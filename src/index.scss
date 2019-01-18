@@ -3,3 +3,16 @@
   height: 600px;
   overflow: hidden;
 }
+
+:global{
+  .ant-row{    
+    .ant-rate-star{
+        font-size: 14px;
+        transition: none;
+        .ant-rate-star-second{
+          transition: none;
+        }
+      }
+  }
+  
+}
