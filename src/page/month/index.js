@@ -8,8 +8,10 @@ import {
   Loading
  } from '../common';
 
+ /**
+  * 月运势
+  */
 export default class Month extends React.PureComponent{
-
 
   render(){
     const { data } = this.props;

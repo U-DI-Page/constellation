@@ -1,20 +1,20 @@
 const imgPath='./assets';
 
 const imageArr = [
-  { title:'shuangzi', src:`${ imgPath }/shuangzi.png` },
-  { title:'baiyang', src:`${ imgPath }/baiyang.png` },
-  { title:'chunv', src:`${ imgPath }/chunv.png` },
-  { title:'jingniu', src:`${ imgPath }/jingniu.png` },
+  { title:'shuangzi', src:`${ imgPath }/shuangzi.jpg` },
+  { title:'baiyang', src:`${ imgPath }/baiyang.jpg` },
+  { title:'chunv', src:`${ imgPath }/chunv.jpg` },
+  { title:'jinniu', src:`${ imgPath }/jinniu.jpg` },
 
-  { title:'juxie', src:`${ imgPath }/juxie.png` },
-  { title:'mojie', src:`${ imgPath }/mojie.png` },
-  { title:'sheshou', src:`${ imgPath }/sheshou.png` },
-  { title:'shizi', src:`${ imgPath }/shizi.png` },
+  { title:'juxie', src:`${ imgPath }/juxie.jpg` },
+  { title:'mojie', src:`${ imgPath }/mojie.jpg` },
+  { title:'sheshou', src:`${ imgPath }/sheshou.jpg` },
+  { title:'shizi', src:`${ imgPath }/shizi.jpg` },
 
-  { title:'shuangyu', src:`${ imgPath }/shuangyu.png` },
-  { title:'shuiping', src:`${ imgPath }/shuiping.png` },
-  { title:'tiancheng', src:`${ imgPath }/tianping.png` },
-  { title:'tianxie', src:`${ imgPath }/tianxie.png` },
+  { title:'shuangyu', src:`${ imgPath }/shuangyu.jpg` },
+  { title:'shuiping', src:`${ imgPath }/shuiping.jpg` },
+  { title:'tiancheng', src:`${ imgPath }/tiancheng.jpg` },
+  { title:'tianxie', src:`${ imgPath }/tianxie.jpg` },
 ]
 
 export {

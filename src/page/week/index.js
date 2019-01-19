@@ -8,6 +8,9 @@ import {
   Loading
  } from '../common';
 
+/**
+ * 本周运势
+ */
 export default class Week extends React.PureComponent{
 
   render(){
@@ -37,7 +40,7 @@ export default class Week extends React.PureComponent{
               </Card>
             </Col>
             <Col span={ 10 } offset={ 1 }>
-              <Card size="small" title="大师指点" style={{ width:'100%',fontSize:'12px'}}>
+              <Card size="small" title="大师指点" style={{ fontSize:'12px' }}>
                 <OneRow>
                   <TitleArea>贵人星座:</TitleArea>{ data.grxz }
                 </OneRow>

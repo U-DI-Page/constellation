@@ -2,6 +2,14 @@
   width: 500px;
   height: 600px;
   overflow: hidden;
+  // background-image: radial-gradient(circle at 20% 40%,#99CCCC 20%, #7171B7 40%, #CCCC99 60%, #4F9C9C 80%);
+  // background-image: radial-gradient(closest-side at 20% 20%, #99CCCC, #7171B7);
+  // background-image: radial-gradient(circle,#99CCCC, #7171B7);
+  background-image: linear-gradient(to right , #7A88FF, #7AFFAF);
+  // background-image: linear-gradient(to right, black, white, black);
+  // background-image: repeating-linear-gradient(45deg, #66CC99 20px, #6666CC 30px, #66CC99 40px);
+  // background-image: repeating-linear-gradient(45deg, #66CC99 20px, #6666CC 20px, #6666CC 30px, #66CC99 30px, #66CC99 40px);
+
 }
 
 :global{

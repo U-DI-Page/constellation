@@ -8,6 +8,9 @@ import {
   Loading
  } from '../common'
 
+ /**
+  * 明日运势
+  */
 export default class Tomorrow extends React.PureComponent{
 
   render(){

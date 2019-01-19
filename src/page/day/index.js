@@ -47,9 +47,9 @@ export default class Day extends React.PureComponent{
                 <OneRow>
                   <TitleArea>贵人星座:</TitleArea>{ data.grxz }
                 </OneRow>
-                <OneRow>
+                {/* <OneRow>
                   <TitleArea>幸运数字:</TitleArea>{ data.lucky_num }
-                </OneRow>
+                </OneRow> */}
                 <OneRow>
                   <TitleArea>幸运时间:</TitleArea>{ data.lucky_time }
                 </OneRow>
@@ -58,6 +58,9 @@ export default class Day extends React.PureComponent{
                 </OneRow>
                 <OneRow>
                   <TitleArea>幸运颜色:</TitleArea>{ data.lucky_color }
+                </OneRow>
+                <OneRow>
+                  <TitleArea>大师告诫:</TitleArea>{ data.day_notice }
                 </OneRow>
               </Card>
             </Col>

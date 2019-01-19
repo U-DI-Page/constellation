@@ -15,6 +15,10 @@ import { imageArr } from './config';
 import Styles from './index.module.scss';
 
 const TabPane = Tabs.TabPane;
+
+/**
+ * 页面主入口
+ */
 export default class Page extends React.PureComponent{
   constructor(props){
     super(...arguments);
@@ -25,6 +29,7 @@ export default class Page extends React.PureComponent{
   }
 
   componentDidMount(){
+    // 减少接口请求次数
     const data = getLocalStorage('data');
     if(data){
       this.setState({ data: JSON.parse(data) });
@@ -49,10 +54,6 @@ export default class Page extends React.PureComponent{
     })
   }
 
-  handleTabChange=()=>{
-
-  }
-
   render(){
     const { data } = this.state;
 
@@ -61,20 +62,21 @@ export default class Page extends React.PureComponent{
         {/* 头部 */}
         <div className={ Styles.header }>
           <Carrousel
+            align="bottom"
             width={ 500 }
             perSideNum={ 3 }
             perSideWidth={ 100 }
+            gradient={ true }
             scale={ 0.7 }
             imageArr={ imageArr }
-            onNextClick={ this.handleChange }
-            onPreClick={ this.handleChange }
+            onChange={ this.handleChange }
           />
         </div>
+        {/* 内容 */}
         <div className={ Styles.body }>
           <Tabs 
             defaultActiveKey="1" 
-            onChange={ this.handleTabChange }
-            tabBarStyle={{ textAlign: 'center' }}
+            tabBarStyle={{ textAlign: 'center', color: '#fff' }}
           >
             <TabPane tab="今日" key="1">
               <Day data={ data.day } />

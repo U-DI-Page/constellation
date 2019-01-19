@@ -8,7 +8,9 @@ import {
   Loading
  } from '../common';
 
-
+/**
+ * 今年运势
+ */
 export default class Year extends React.PureComponent{
 
   render(){
