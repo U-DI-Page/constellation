@@ -29,13 +29,15 @@ export default class Page extends React.PureComponent{
   }
 
   componentDidMount(){
+
+    this.getData({ star: imageArr[0].title });
     // 减少接口请求次数
-    const data = getLocalStorage('data');
-    if(data){
-      this.setState({ data: JSON.parse(data) });
-    }else{
-      this.getData();
-    }
+    // const data = getLocalStorage('data');
+    // if(data){
+    //   this.setState({ data: JSON.parse(data) });
+    // }else{
+    //   this.getData({ star: imageArr[0] });
+    // }
   }
 
   // 切换星座
