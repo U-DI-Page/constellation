@@ -5,6 +5,7 @@ const MinCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // 基础配置
 const webpackBaseConfig= require('./webpack.base.config');
 // 常量
@@ -56,6 +57,7 @@ const proConfig={
       verbose: false, // 开启控制台输出信息
       dry: false // 启用删除文件
     }),
+    new BundleAnalyzerPlugin()
   ],
   optimization:{
     minimizer:[
