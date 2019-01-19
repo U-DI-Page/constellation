@@ -6806,10 +6806,10 @@ rc-calendar@~9.10.3:
     rc-util "^4.1.1"
     react-lifecycles-compat "^3.0.4"
 
-rc-carrousel@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/rc-carrousel/-/rc-carrousel-1.0.4.tgz#8a9a9c7aada32f3987843a6c8f7567eedc759fe3"
-  integrity sha512-+KwKxhsYVNAH+t8iPHRUxbXBu4p4Q5OUUONvVkKyfK2rychTUWqNA5kEzNIxmfq4XbpWG/fwINMlZtcYW/QlIQ==
+rc-carrousel@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/rc-carrousel/-/rc-carrousel-1.0.5.tgz#c0aaea28921e2ad28a4034ce85f348c691c92afd"
+  integrity sha512-S5EZgfLeuWiVxzF+MbopzJ3pDKbXGIrc2XxDz1+xnz7uHRtsZgiAvXrnaMz7+rw1r1znym1RtQUfKbfzc7ZJCg==
   dependencies:
     prop-types "^15.6.2"
     react "^16.7.0"
