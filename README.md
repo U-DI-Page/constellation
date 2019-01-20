@@ -30,6 +30,7 @@
 
 ## 二、使用方法
 
+### 1、方式一
 * 下载代码
 ```bash
   git clone https://github.com/FourPig/constellation.git
@@ -38,4 +39,8 @@
 
 * 打开chrome 更多工具>扩展程序 打开开发者模式，点击加载已解压的扩展程序 加载dist目录·
 ![alt](./pic/chrome插件使用.png)
+
+### 2、方式二
+* [下载包](./constellation.crx)
+* 拖入谷歌浏览器,点击添加扩展程序
 
