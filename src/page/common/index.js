@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ Fragment } from 'react';
 import { Row,Col,Card,Spin } from 'antd';
 
 // loading
@@ -30,11 +30,21 @@ export const TxtCard=(props)=>(
 
 // 内容区域
 export const ContentArea=(props)=>(
-  <div style={{ height:'310px',overflow:'auto' }}>
-    <Col span={ 24 } offset={ 1 }>
-      { props.children }
-    </Col>
-  </div>
+  <Fragment>
+    <div style={{
+      position:'absolute',
+      height:'100%',
+      width:'20px',
+      right:0,
+      backgroundColor:'#7afcb2'
+    }}></div>
+    <div style={{ height: '310px', overflowY: 'auto', overflowX: 'hidden' }}>
+      <Col span={24} offset={1}>
+        {props.children}
+      </Col>
+    </div>
+  </Fragment>
+
 );
 
 // 行
