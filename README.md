@@ -1,6 +1,9 @@
 # 一款萌萌哒 Chrome 星座运势插件
 ![alt](./pic/constellation.gif)
 
+项目中用到的旋转木马 图片轮播组件:
+(https://github.com/FourPig/rc-carrousel)
+
 ## 一、星座运势的起源
 >  西方古代星座,西方星座起源于四大文明古国之一的古巴比伦。
 
