@@ -41,6 +41,6 @@
 ![alt](./pic/chrome插件使用.png)
 
 ### 2、方式二
-* [下载包](./constellation.crx)
+* <a href="./constellation.crx">下载包</a>
 * 拖入谷歌浏览器,点击添加扩展程序
 
