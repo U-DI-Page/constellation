@@ -3,7 +3,7 @@
   "name": "星座运势",
   "version": "0.0.1",
   "manifest_version": 2,
-
+  "default_title":"一款萌萌哒星座运势插件",
   "description": "一款萌萌哒星座运势插件",
   "icons": {
     "16": "./icons/star-16.png",
